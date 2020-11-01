@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Chamadas de Bibliotecas -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+    <title>App Lista de Mercado</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+        <a class="navbar-brand" href="#">Lista Mercado</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html">Sobre</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+            </li>
+         
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Produto da Lista" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          </form>
+        </div>
+    </nav>
+
+ 
+    <hr>
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-8">          
+          <h1 class="text-center display-4" style="font-size: 40px;">Lista de Mercado</h1>
+        </div>
+        <div class="col-4 justify-content-center align-self-center">
+          <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#myModal">Adicionar</button>   
+          <button class="btn btn-danger" type="submit" style="margin-top:2px;" data-toggle="modal" data-target="#modalLimpar">Limpar</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid text-center">
+        <div class="row">
+          <div class="col-sm">
+            <table class="table table-striped" style="width: 100%;max-width: 100%;">
+                <thead>
+                  <tr>
+
+                    <th scope="col">Produto</th>
+                    <th scope="col">Quant.</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Biscoito</td>
+                    <td>3</td>
+                    <td>R$2,50</td>
+                    <td>R$7,50</td>
+                    <td>    
+                      <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#excluirModal">
+                        <i class="far fa-trash-alt"></i>
+                      </button>
+                      <button class="btn btn-info btn-sm mr-1">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Salgadinho</td>
+                    <td>4</td>
+                    <td>R$3,00</td>
+                    <td>R$12,00</td>
+                    <td>    
+                      <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#excluirModal">
+                        <i class="far fa-trash-alt"></i>
+                      </button>
+                      <button class="btn btn-info btn-sm mr-1">
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Nutella</td>
+                    <td>5</td>
+                    <td>R$15,00</td>
+                    <td>R$75,00</td>
+                    <td>    
+                      <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#excluirModal">
+                        <i class="far fa-trash-alt"></i>
+                      </button>
+                      <button class="btn btn-info btn-sm mr-1")>
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Bolinho</td>
+                    <td>5</td>
+                    <td>R$15,00</td>
+                    <td>R$75,00</td>
+                    <td>     
+                      <button class="btn btn-danger btn-sm " data-toggle="modal" data-target="#excluirModal">
+                        <i class="far fa-trash-alt"></i>
+                      </button>
+                      <button class="btn btn-info btn-sm mr-1")>
+                        <i class="fas fa-edit"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+          
+          </div>
+        </div>
+    
+      </div>
+      <div class="container-fluid text-center" style="position:fixed; bottom:0">
+        <div class="row">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Total</th>
+                <th scope="col">R$105,00 </th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+
+      <!-- Modal Adicionar -->
+      <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Adicionar item na lista</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input class="form-control" type="text" placeholder="Digite nome do produto">
+              <input class="form-control" type="number" placeholder="Digite a Quantidade">
+              <input class="form-control" type="number" placeholder="Preço">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Excluir -->
+      <div class="modal" tabindex="-1" role="dialog" id="excluirModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Confirmar exclusão</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+              <button type="button" class="btn btn-primary">Sim</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Modal Limpar -->
+       <div class="modal" tabindex="-1" role="dialog" id="modalLimpar">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Confirmar exclusão de todos os itens</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+              <button type="button" class="btn btn-primary">Sim</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
